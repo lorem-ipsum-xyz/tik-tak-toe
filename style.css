@@ -1,0 +1,135 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: Arial, sans-serif
+}
+:root {
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --danger: #dc3545;
+  --warning: #ffc107;
+  --info: #17a2b8;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+body{background: var(--light);}
+.xtext{color:var(--danger)}
+.otext{color:var(--success)}
+.container{margin-top: 20px}
+.head{
+  width: 350px;
+  padding: 5px 8px;
+  margin: 10px auto;
+  background: #FBDEC9;
+  box-shadow: 0 1px 5px #9A928D;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 22px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.head .title{
+  grid-row: 1;
+  grid-column: 1 / 4;
+  color: #E96F18;
+}
+.head .text{
+  grid-column: 1/4;
+  background: #FFEADB;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -1px 1px 7px #F8C49F;
+}.head .text h2{
+  font-weight: 500;
+} 
+.text h2 .x{color:var(--danger)}
+.text h2 .o{color:var(--success)}
+.x,.o{font-weight: 900;font-size:30px}
+.win{color:#B49F09}
+.dark{color:var(--dark)}
+
+.ttt{
+  background: #FFAB69DE;
+  margin: 0 auto;
+  height: 350px;
+  width: 350px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.board{
+  background: none;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 0.6rem;
+  position: relative;
+}
+
+.draw-line{
+  position: absolute;
+  height: 13px;
+  border-radius: 10px;
+  background: var(--primary);
+  z-index: 2;
+  border: 1px solid var(--info);
+}
+
+.box{
+  background: #FFE4D0A3;
+  border-radius: 7px;
+  border: 3px solid #F17B1FDE;
+  position: relative;
+  padding: 13px;
+  cursor: pointer;
+}
+
+.line{
+  position: absolute;
+  background: var(--danger);
+  width: 80%;
+  height: 0.6rem;
+  transform: translate(-50%,-50%);
+  top:47%;
+  left: 11%;
+  z-index: 1;
+  border-radius: 10px
+}
+.ln1{transform: rotateZ(45deg);}
+.ln2{transform: rotateZ(133deg)}
+
+
+.circle{
+  border: 0.6rem solid var(--success);
+  height: 100%;
+  width: 100%;
+  border-radius: 50%
+}
+
+.restart{
+  background: none;
+  padding: 15px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: center;
+}.restart button{
+  padding: 9px 15px;
+  font-size: 21px;
+  font-weight: 680;
+  background: #1E7CD8;
+  color: #E5E6E8;
+  border:none;
+  border-radius: 6px;
+}
+
+@media(min-width: 700px){
+  .head{width:400px}
+  .ttt{
+    width: 400px;
+    height: 400px;
+  }
+}
